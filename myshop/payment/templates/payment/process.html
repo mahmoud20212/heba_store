@@ -1,0 +1,86 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Pay your order" %}{% endblock %}
+
+{% block content %}
+<div class="py-5 container-fluid custom-container-fluid">
+  <nav class="mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+        </li>
+        <li class="breadcrumb-item" aria-current="page">
+          <a href="{% url 'user_orders' %}">{% trans "My orders" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {% trans "Order summary" %}
+        </li>
+    </ol>
+  </nav>
+  <h1 class="mb-3">{% trans "Order summary" %}</h1>
+  <div class="border shadow-sm p-2 bg-white">
+    <table class="cart table table-striped">
+      <thead>
+        <tr class="bg-hiba">
+          <th class="fw-normal">{% trans "Image" %}</th>
+          <th class="fw-normal">{% trans "Product" %}</th>
+          <th class="fw-normal">{% trans "Price" %}</th>
+          <th class="fw-normal">{% trans "Quantity" %}</th>
+          <th class="fw-normal">{% trans "Total" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in order.items.all %}
+        <tr class="row{% cycle "1" "2" %}">
+          <td>
+            <img class="border shadow-sm" style="width: 200px; max-width: 100%; object-fit: cover;"
+              src="{% if item.product.image %}{{ item.product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+          </td>
+          <td>{{ item.product.name }}</td>
+          <td class="num">${{ item.price }}</td>
+          <td class="num">{{ item.quantity }}</td>
+          <td class="num">${{ item.get_cost }}</td>
+        </tr>
+        {% endfor %}
+        {% if order.coupon %}
+        <tr class="subtotal">
+          <td>{% trans "Subtotal" %}</td>
+          <td colspan="3"></td>
+          <td class="num">
+            ${{ order.get_total_cost_before_discount|floatformat:2 }}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {% blocktrans with code=order.coupon.code discount=order.discount %}
+              "{{ code }}" ({{ discount }}% off)
+            {% endblocktrans %}
+          </td>
+          <td colspan="3"></td>
+          <td class="num neg text-danger">
+            - ${{ order.get_discount|floatformat:2 }}
+          </td>
+        </tr>
+        {% endif %}
+        <tr class="total">
+          <td><strong>{% trans "Total" %}</strong></td>
+          <td colspan="3"></td>
+          <td class="num">
+            <strong>${{ order.get_total_cost|floatformat:2 }}</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {% if order.paid %}
+    <button type="button" class="btn btn-success btn-lg w-100 mt-3" disabled><i class="fa-solid fa-check"></i> Paid</button>
+  {% else %}
+    <form action="{% url 'payment:process' %}" method="post">
+      <input class="btn btn-success btn-lg w-100 mt-3" type="submit" value="{% trans 'Pay now' %}">
+      {% csrf_token %}
+    </form>
+  {% endif %}
+</div>
+{% endblock %}

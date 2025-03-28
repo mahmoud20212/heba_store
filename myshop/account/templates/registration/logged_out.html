@@ -1,0 +1,15 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Logout" %}{% endblock %}
+
+{% block content %}
+<div class="py-5 container-fluid custom-container-fluid">
+    <h1>{% trans "Logged out" %}</h1>
+    <hr>
+    <p class="fw-semibold">
+        {% trans "You have been successfully logged out." %}
+        {% trans "You can" %} <a href="{% url 'login' %}">{% trans "login again" %}</a>.
+    </p>
+</div>
+{% endblock %}

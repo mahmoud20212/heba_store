@@ -1,0 +1,128 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+  {% if category %}
+    {{ category.name }}
+  {% else %}
+    {% trans "Products" %}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<div id="main" class="product-list py-5 container-fluid custom-container-fluid">
+  <nav class="mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {% trans "Products" %}
+        </li>
+    </ol>
+  </nav>
+
+  <!-- <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active bg-dark text-center">
+        <div class="container">
+          <div class="carousel-caption text-center top-0">
+            <h4>Airpods Wireless Bluetooth</h4>
+          </div>
+        </div>
+        <img height="300" class="rounded-circle p-5 m-5" src="{% static 'img/airpods.jpg' %}" aria-hidden="true" />
+      </div>
+      <div class="carousel-item bg-dark text-center">
+        <div class="container">
+          <div class="carousel-caption text-center top-0">
+            <h4>iPhone 14 Pro Max</h4>
+          </div>
+        </div>
+        <img height="300" class="rounded-circle p-5 m-5" src="{% static 'img/phone.jpg' %}" aria-hidden="true" />
+      </div>
+      <div class="carousel-item bg-dark text-center">
+        <div class="container">
+          <div class="carousel-caption text-center top-0">
+            <h4>Camera (Sony)</h4>
+          </div>
+        </div>
+        <img height="300" class="rounded-circle p-5 m-5" src="{% static 'img/camera.jpg' %}" aria-hidden="true" />
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+  
+  <div class="row">
+    <div class="col-lg"></div>
+    <div class="col-lg-9">
+      <h1 class="mb-3">
+        {% if category %}
+          {{ category.name }}
+        {% else %}
+          {% trans "Products" %}
+        {% endif %}
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 mb-3">
+      <div class="border bg-white p-3">
+        <h4 class="mb-3">{% trans 'Categories' %}</h4>
+        <div class="list-group list-group-flush">
+          <a href="{% url 'shop:product_list' %}"class="list-group-item list-group-item-action {% if not category %} active {% endif %}">
+            {% trans "All" %}
+          </a>
+          {% for c in categories %}
+            <a href="{{ c.get_absolute_url }}" class="list-group-item list-group-item-action {% if category.slug == c.slug %} active {% endif %}">
+              {{ c.name }}
+            </a>
+          {% endfor %}
+        </div>
+    </div>
+    </div>
+    <div class="col-lg-9">
+      <div class="row">
+        {% for product in products %}
+          <div class="col-lg-4 col-md-6 mb-3">
+            <div class="card rounded-0 shadow-sm">
+              <a href="{{ product.get_absolute_url }}">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}"
+                  class="card-img-top p-2" alt="{{ product.name }}">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title border-bottom pb-2">
+                  <a href="{{ product.get_absolute_url }}" class="text-decoration-none">{{ product.name }}</a>
+                </h5>
+                <p class="card-text">
+                  {{ product.description }}
+                </p>
+                <h3>${{ product.price }}</h3>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <p class="text-center alert alert-warning">{% trans "No products available." %}</p>
+        {% endfor %}
+      </div>
+      {% if products %}
+        {% include "shop/pagination.html" with page_obj=products %}
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+{% endblock %}

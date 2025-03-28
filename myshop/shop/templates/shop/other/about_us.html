@@ -1,0 +1,116 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+{% trans "About Us" %}
+{% endblock %}
+
+{% block styles %}
+<style>
+    .about-us {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #f9f9f9;
+    }
+
+    .about-us h1 {
+        text-align: center;
+        color: #343a40;
+    }
+
+    .about-us p {
+        color: #6c757d;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .about-us img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .about-us .team {
+        margin-top: 30px;
+    }
+
+    .about-us .team-member {
+        text-align: center;
+    }
+
+    .about-us .team-member img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .about-us .team-member h3 {
+        font-size: 18px;
+        color: #343a40;
+    }
+
+    .about-us .team-member p {
+        font-size: 14px;
+        color: #6c757d;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid custom-container-fluid about-us py-5">
+    <nav class="mb-5" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                {% trans "About Us" %}
+            </li>
+        </ol>
+    </nav>
+
+    <h1>{% trans "About Us" %}</h1>
+
+    <img src="{% static 'img/about_us.webp' %}" alt="{% trans 'About Us' %}" class="shadow-sm rounded-0 border border-4 img-fluid">
+
+    <h2>{% trans "Our Story" %}</h2>
+    <p>{% trans "We are a passionate team of individuals who have come together to bring you the best shopping experience. Our journey started with a vision to offer high-quality products at affordable prices, all while providing excellent customer service. We believe in building long-term relationships with our customers and ensuring their satisfaction." %}</p>
+
+    <h2>{% trans "Our Mission" %}</h2>
+    <p>{% trans "Our mission is to offer a diverse range of high-quality products that cater to the needs of our customers. We are committed to offering fast, reliable, and convenient shopping experiences through our online platform, ensuring that you have access to the best products at the best prices." %}</p>
+
+    <h2>{% trans "Meet the Team" %}</h2>
+    <div class="team row">
+        <div class="team-member col-md-4">
+            <img src="{% static 'img/m1.jpg' %}" alt="{% trans 'Team Member 1' %}">
+            <h3>{% trans "John Doe" %}</h3>
+            <p>{% trans "Founder & CEO" %}</p>
+        </div>
+        <div class="team-member col-md-4">
+            <img src="{% static 'img/m3.jpg' %}" alt="{% trans 'Team Member 3' %}">
+            <h3>{% trans "Jane Smith" %}</h3>
+            <p>{% trans "Chief Operating Officer" %}</p>
+        </div>
+        <div class="team-member col-md-4">
+            <img src="{% static 'img/m2.jpg' %}" alt="{% trans 'Team Member 2' %}">
+            <h3>{% trans "Emily Johnson" %}</h3>
+            <p>{% trans "Marketing Manager" %}</p>
+        </div>
+    </div>
+
+    <h2>{% trans "Why Choose Us?" %}</h2>
+    <ul>
+        <li>{% trans "Wide variety of high-quality products." %}</li>
+        <li>{% trans "Affordable prices with special discounts." %}</li>
+        <li>{% trans "Excellent customer service." %}</li>
+        <li>{% trans "Fast and reliable shipping." %}</li>
+        <li>{% trans "A secure and easy shopping experience." %}</li>
+    </ul>
+</div>
+{% endblock %}

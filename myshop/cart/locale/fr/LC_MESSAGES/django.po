@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 19:59+0200\n"
+"PO-Revision-Date: 2025-03-25 21:29+0000\n"
+"Last-Translator: Mahmoud Ouda <admin@admin.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\cart\forms.py:12 .\cart\templates\cart\detail.html:31
+msgid "Quantity"
+msgstr "Quantité"
+
+#: .\cart\templates\cart\detail.html:6 .\cart\templates\cart\detail.html:22
+msgid "Your shopping cart"
+msgstr "Votre panier"
+
+#: .\cart\templates\cart\detail.html:14
+msgid "Home"
+msgstr "Maison"
+
+#: .\cart\templates\cart\detail.html:17
+msgid "My cart"
+msgstr "Mon panier"
+
+#: .\cart\templates\cart\detail.html:29
+msgid "Image"
+msgstr "Image"
+
+#: .\cart\templates\cart\detail.html:30
+msgid "Product"
+msgstr "Produit"
+
+#: .\cart\templates\cart\detail.html:32 .\cart\templates\cart\detail.html:57
+msgid "Remove"
+msgstr "Retirer"
+
+#: .\cart\templates\cart\detail.html:33
+msgid "Unit price"
+msgstr "Prix ​​unitaire"
+
+#: .\cart\templates\cart\detail.html:34
+msgid "Price"
+msgstr "Prix"
+
+#: .\cart\templates\cart\detail.html:51
+msgid "Update"
+msgstr "Mise à jour"
+
+#: .\cart\templates\cart\detail.html:67
+msgid "Your cart is empty."
+msgstr "Votre panier est vide."
+
+#: .\cart\templates\cart\detail.html:72
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#: .\cart\templates\cart\detail.html:78
+#, python-format
+msgid ""
+"\n"
+"                      \"%(code)s\" coupon (%(discount)s%% off)\n"
+"                    "
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:90
+msgid "Total"
+msgstr "Total"
+
+#: .\cart\templates\cart\detail.html:103
+msgid "Apply a coupon"
+msgstr "Appliquer un coupon"
+
+#: .\cart\templates\cart\detail.html:107
+msgid "Apply"
+msgstr "Appliquer"
+
+#: .\cart\templates\cart\detail.html:110
+msgid "Continue shopping"
+msgstr "Continuer vos achats"
+
+#: .\cart\templates\cart\detail.html:111
+msgid "Checkout"
+msgstr "Vérifier"
+
+#: .\cart\templates\cart\detail.html:118
+msgid "People who bought this also bought"
+msgstr "Les personnes qui ont acheté ceci ont également acheté"

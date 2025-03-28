@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 19:59+0200\n"
+"PO-Revision-Date: 2025-03-25 21:52+0000\n"
+"Last-Translator: Mahmoud Ouda <admin@admin.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\payment\templates\payment\canceled.html:4
+msgid "Payment canceled"
+msgstr "Paiement annulé"
+
+#: .\payment\templates\payment\canceled.html:8
+msgid "Your payment has not been processed"
+msgstr "Votre paiement n'a pas été traité"
+
+#: .\payment\templates\payment\canceled.html:10
+msgid "There was a problem processing your payment."
+msgstr "Un problème est survenu lors du traitement de votre paiement."
+
+#: .\payment\templates\payment\canceled.html:11
+#: .\payment\templates\payment\completed.html:11
+msgid "Go back"
+msgstr "Retour"
+
+#: .\payment\templates\payment\completed.html:4
+msgid "Payment successful"
+msgstr "Paiement réussi"
+
+#: .\payment\templates\payment\completed.html:8
+msgid "Your payment was successful"
+msgstr "Votre paiement a réussi"
+
+#: .\payment\templates\payment\completed.html:10
+msgid "Your payment has been processed successfully."
+msgstr "Votre paiement a été traité avec succès."
+
+#: .\payment\templates\payment\process.html:5
+msgid "Pay your order"
+msgstr "Payez votre commande"
+
+#: .\payment\templates\payment\process.html:12
+msgid "Home"
+msgstr "Maison"
+
+#: .\payment\templates\payment\process.html:15
+msgid "My orders"
+msgstr "Mes commandes"
+
+#: .\payment\templates\payment\process.html:18
+#: .\payment\templates\payment\process.html:22
+msgid "Order summary"
+msgstr "Résumé de la commande"
+
+#: .\payment\templates\payment\process.html:27
+msgid "Image"
+msgstr "Image"
+
+#: .\payment\templates\payment\process.html:28
+msgid "Product"
+msgstr "Produit"
+
+#: .\payment\templates\payment\process.html:29
+msgid "Price"
+msgstr "Prix"
+
+#: .\payment\templates\payment\process.html:30
+msgid "Quantity"
+msgstr "Quantité"
+
+#: .\payment\templates\payment\process.html:31
+#: .\payment\templates\payment\process.html:68
+msgid "Total"
+msgstr "Total"
+
+#: .\payment\templates\payment\process.html:49
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#: .\payment\templates\payment\process.html:57
+#, python-format
+msgid ""
+"\n"
+"              \"%(code)s\" (%(discount)s%% off)\n"
+"            "
+msgstr ""
+
+#: .\payment\templates\payment\process.html:81
+msgid "Pay now"
+msgstr "Payer maintenant"
+
+#: .\payment\urls.py:8
+msgid "process/"
+msgstr ""
+
+#: .\payment\urls.py:9
+msgid "completed/"
+msgstr ""
+
+#: .\payment\urls.py:10
+msgid "canceled/"
+msgstr ""

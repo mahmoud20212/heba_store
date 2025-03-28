@@ -1,0 +1,71 @@
+{% extends "account/profile.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "My orders" %}{% endblock %}
+
+{% block breadcrumb %}
+<nav class="mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+        </li>
+        <!-- <li class="breadcrumb-item">
+            <a href="{% url 'edit' %}">{% trans "My account" %}</a>
+        </li> -->
+        <li class="breadcrumb-item active" aria-current="page">
+            {% trans "My orders" %}
+        </li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block account_content %}
+<div class="border bg-white p-3">
+    <div class="table-responsive">
+        <table class="cart table table-striped">
+            <thead>
+                <tr class="bg-hiba">
+                    <th class="fw-normal">{% trans "ID" %}</th>
+                    <th class="fw-normal">{% trans "Review" %}</th>
+                    <th class="fw-normal">{% trans "Paid" %}</th>
+                    <th class="fw-normal">{% trans "Address" %}</th>
+                    <th class="fw-normal">{% trans "Postal code" %}</th>
+                    <th class="fw-normal">{% trans "City" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <td>
+                        {{order.id}}
+                    </td>
+                    <td>
+                        <a href="{% url 'set_order' order.id %}">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </td>
+                    <td>
+                        {% if order.paid %}
+                        <i class="text-success fa-solid fa-check-circle"></i>
+                        {% else %}
+                        <i class="text-danger fa-solid fa-xmark-circle"></i>
+                        {% endif %}
+                    </td>
+                    <td>{{ order.address }}</td>
+                    <td>{{ order.postal_code }}</td>
+                    <td>{{ order.city }}</td>
+                </tr>
+                {% empty %}
+                <tr class="text-center">
+                    <td colspan="6">{% trans "No orders available." %}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% if orders %}
+        {% include "account/orders_pagination.html" with page_obj=page_obj %}
+    {% endif %}
+</div>
+{% endblock %}

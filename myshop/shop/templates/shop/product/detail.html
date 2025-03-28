@@ -1,0 +1,98 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block styles %}
+  <style>
+    form#add-to-cart div {
+      display: flex;
+      gap: 16px;
+    }
+    form#add-to-cart div select {
+      flex: 1;
+    }
+  </style>
+{% endblock %}
+
+{% block title %}
+  {{ product.name }}
+{% endblock %}
+{% block content %}
+<div class="product-detail py-5 container-fluid custom-container-fluid">
+  <nav class="mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="{% url 'shop:product_list' %}">{% trans "Products" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{ product.name }}
+        </li>
+    </ol>
+  </nav>
+  <a class="btn btn-dark btn-sm mb-2" href="{% url 'shop:product_list' %}">{% trans "Go back" %}</a>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="row bg-white g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col-md-6 p-2 align-items-center d-flex position-relative">
+          <span style="top: 15px; left: 15px;" class="badge bg-dark position-absolute">{{ product.category }}</span>
+          <img class="bd-placeholder-img w-100" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+        </div>
+        <div class="col-md-6 py-3 px-3 px-md-2 d-flex flex-column position-static">
+          <div class="border-bottom">
+            <h3 class="mb-0">{{ product.name }}</h3>
+          </div>
+          <p class="card-text">
+            {{ product.description|linebreaks }}
+          </p>
+          <h4 class="mt-auto pt-2 border-top">${{ product.price }}</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-md-4">
+      <img class="w-100 border rounded shadow-sm p-2 bg-white" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+    </div>
+    <div class="col-md-4">
+      <div class="p-3 rounded shadow-sm border bg-white">
+        <div class="border-bottom pb-2">
+          <h3>{{ product.name }}</h3>
+          <h5>
+            <a class="text-decoration-none d-block" href="{{ product.category.get_absolute_url }}">
+              {{ product.category }}
+            </a>
+          </h5>
+        </div>
+        <p>{{ product.description|linebreaks }}</p>
+        <h4 class="border-top pt-2">
+          ${{ product.price }}
+        </h4>
+      </div>
+    </div> -->
+    
+    <div class="col-md-4">
+      <form id="add-to-cart" class="p-3 shadow-sm border bg-white" action="{% url "cart:cart_add" product.id %}" method="post">
+        {{ cart_product_form }}
+        {% csrf_token %}
+        <input class="btn btn-dark w-100 mt-3" type="submit" value="{% trans "Add to cart" %}">
+      </form>
+    </div>
+  </div>
+
+  {% if recommended_products %}
+    <div class="recommendations">
+      <h3>{% trans "People who bought this also bought" %}</h3>
+      {% for p in recommended_products %}
+        <div class="item">
+          <a href="{{ p.get_absolute_url }}">
+            <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static  "img/no_image.png" %}{% endif %}">
+          </a>
+          <p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

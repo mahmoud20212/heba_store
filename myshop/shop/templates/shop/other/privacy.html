@@ -1,0 +1,102 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+{% trans "Privacy Policy" %}
+{% endblock %}
+
+{% block styles %}
+<style>
+    .privacy-policy {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #f9f9f9;
+    }
+
+    .privacy-policy h1 {
+        text-align: center;
+        color: #343a40;
+    }
+
+    .privacy-policy h2 {
+        color: #343a40;
+        margin-top: 30px;
+    }
+
+    .privacy-policy p {
+        color: #6c757d;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid custom-container-fluid privacy-policy py-5">
+    <nav class="mb-5" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                {% trans "Privacy Policy" %}
+            </li>
+        </ol>
+    </nav>
+
+    <h1>{% trans "Privacy Policy" %}</h1>
+
+    <h2>{% trans "Introduction" %}</h2>
+    <p>{% trans "Welcome to our Privacy Policy page. Your privacy is of paramount importance to us. This Privacy Policy outlines the types of personal information that is received and collected by us and how it is used." %}</p>
+
+    <h2>{% trans "Information We Collect" %}</h2>
+    <p>{% trans "We collect personal information when you use our services, make purchases, or interact with our website. The types of personal information we collect may include:" %}</p>
+    <ul>
+        <li>{% trans "Your name and contact details" %}</li>
+        <li>{% trans "Billing and shipping address" %}</li>
+        <li>{% trans "Payment information" %}</li>
+        <li>{% trans "Order history" %}</li>
+        <li>{% trans "Other information necessary for providing our services" %}</li>
+    </ul>
+
+    <h2>{% trans "How We Use Your Information" %}</h2>
+    <p>{% trans "We use your information to provide, improve, and personalize our services. Some of the key ways we use your personal information include:" %}</p>
+    <ul>
+        <li>{% trans "Processing orders and transactions" %}</li>
+        <li>{% trans "Providing customer support" %}</li>
+        <li>{% trans "Personalizing your shopping experience" %}</li>
+        <li>{% trans "Sending promotional offers, newsletters, and updates" %}</li>
+        <li>{% trans "Complying with legal obligations" %}</li>
+    </ul>
+
+    <h2>{% trans "Sharing Your Information" %}</h2>
+    <p>{% trans "We do not sell, trade, or rent your personal information to third parties. However, we may share your personal information in the following cases:" %}</p>
+    <ul>
+        <li>{% trans "With service providers who help us deliver our services (e.g., payment processors, shipping companies)" %}</li>
+        <li>{% trans "To comply with legal obligations or enforce our terms and conditions" %}</li>
+        <li>{% trans "In the event of a business transaction such as a merger or acquisition" %}</li>
+    </ul>
+
+    <h2>{% trans "Cookies and Tracking Technologies" %}</h2>
+    <p>{% trans "We use cookies and other tracking technologies to enhance your experience on our site. These technologies help us analyze trends, track user movements, and gather demographic information to improve our website." %}</p>
+
+    <h2>{% trans "Your Rights and Choices" %}</h2>
+    <p>{% trans "You have the right to access, correct, and delete your personal information. You can also opt-out of receiving marketing communications from us by following the unsubscribe link in the emails or contacting us directly." %}</p>
+
+    <h2>{% trans "Data Security" %}</h2>
+    <p>{% trans "We take reasonable precautions to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is completely secure, and we cannot guarantee the absolute security of your data." %}</p>
+
+    <h2>{% trans "Changes to This Privacy Policy" %}</h2>
+    <p>{% trans "We may update this Privacy Policy from time to time. When we make changes, we will post the updated policy on this page with an updated date. Please review this page regularly to stay informed about how we are protecting your information." %}</p>
+
+    <h2>{% trans "Contact Us" %}</h2>
+    <p>{% trans "If you have any questions or concerns about our Privacy Policy, please contact us at:" %}</p>
+    <ul>
+        <li>{% trans "Email: support@yourdomain.com" %}</li>
+        <li>{% trans "Phone: +123456789" %}</li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,600 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 19:59+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+#: .\shop\models.py:9 .\shop\models.py:31
+msgid "name"
+msgstr ""
+
+#: .\shop\models.py:10 .\shop\models.py:32
+msgid "slug"
+msgstr ""
+
+#: .\shop\models.py:33
+msgid "description"
+msgstr ""
+
+#: .\shop\models.py:36
+msgid "category"
+msgstr ""
+
+#: .\shop\models.py:39
+msgid "image"
+msgstr ""
+
+#: .\shop\models.py:42
+msgid "price"
+msgstr ""
+
+#: .\shop\models.py:45
+msgid "available"
+msgstr ""
+
+#: .\shop\models.py:46
+msgid "created"
+msgstr ""
+
+#: .\shop\models.py:47
+msgid "updated"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:12
+msgid "My shop"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:11
+msgid "Quick Links"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:13 .\shop\templates\shop\header.html:16
+#: .\shop\templates\shop\old_header.html:108
+#: .\shop\templates\shop\other\about_us.html:70
+#: .\shop\templates\shop\other\home.html:6
+#: .\shop\templates\shop\other\privacy.html:42
+#: .\shop\templates\shop\other\terms.html:41
+#: .\shop\templates\shop\product\detail.html:25
+#: .\shop\templates\shop\product\list.html:18
+msgid "Home"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:14 .\shop\templates\shop\header.html:22
+#: .\shop\templates\shop\old_header.html:17
+#: .\shop\templates\shop\old_header.html:113
+#: .\shop\templates\shop\product\detail.html:28
+#: .\shop\templates\shop\product\list.html:9
+#: .\shop\templates\shop\product\list.html:21
+#: .\shop\templates\shop\product\list.html:76
+msgid "Products"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:15 .\shop\templates\shop\header.html:58
+msgid "My cart"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:19
+msgid "Contact"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:21
+msgid "Email"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:22
+msgid "Phone"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:33
+msgid "About"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:35
+msgid "Learn more about us"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:37
+msgid "Privacy"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:38
+msgid "Terms"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:42
+msgid "Newsletter"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:43
+msgid "Subscribe to get the latest updates and offers."
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:45
+msgid "Enter your email"
+msgstr ""
+
+#: .\shop\templates\shop\footer.html:46
+msgid "Subscribe"
+msgstr ""
+
+#: .\shop\templates\shop\header.html:34
+msgid "My account"
+msgstr ""
+
+#: .\shop\templates\shop\header.html:40
+#: .\shop\templates\shop\old_header.html:60
+msgid "Logout"
+msgstr ""
+
+#: .\shop\templates\shop\header.html:50
+#: .\shop\templates\shop\old_header.html:67
+msgid "Login"
+msgstr ""
+
+#: .\shop\templates\shop\header.html:67
+#: .\shop\templates\shop\old_header.html:75
+msgid "Language"
+msgstr ""
+
+#: .\shop\templates\shop\header.html:85
+msgid "Search"
+msgstr ""
+
+#: .\shop\templates\shop\old_header.html:30
+msgid "Your cart"
+msgstr ""
+
+#: .\shop\templates\shop\old_header.html:32
+#, python-format
+msgid ""
+"\n"
+"              %(items)s item, $%(total)s\n"
+"              "
+msgid_plural ""
+"\n"
+"              %(items)s items, $%(total)s\n"
+"              "
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\shop\templates\shop\old_header.html:41
+msgid "Your cart is empty."
+msgstr ""
+
+#: .\shop\templates\shop\old_header.html:53
+msgid "Profile"
+msgstr ""
+
+#: .\shop\templates\shop\old_header.html:118
+#: .\shop\templates\shop\product\list.html:84
+msgid "Categories"
+msgstr ""
+
+#: .\shop\templates\shop\old_header.html:123
+#: .\shop\templates\shop\product\list.html:87
+msgid "All"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:6
+#: .\shop\templates\shop\other\about_us.html:73
+#: .\shop\templates\shop\other\about_us.html:78
+#: .\shop\templates\shop\other\about_us.html:80
+msgid "About Us"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:82
+msgid "Our Story"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:83
+msgid ""
+"We are a passionate team of individuals who have come together to bring you "
+"the best shopping experience. Our journey started with a vision to offer "
+"high-quality products at affordable prices, all while providing excellent "
+"customer service. We believe in building long-term relationships with our "
+"customers and ensuring their satisfaction."
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:85
+msgid "Our Mission"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:86
+msgid ""
+"Our mission is to offer a diverse range of high-quality products that cater "
+"to the needs of our customers. We are committed to offering fast, reliable, "
+"and convenient shopping experiences through our online platform, ensuring "
+"that you have access to the best products at the best prices."
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:88
+msgid "Meet the Team"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:91
+msgid "Team Member 1"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:92
+msgid "John Doe"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:93
+msgid "Founder & CEO"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:96
+msgid "Team Member 3"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:97
+msgid "Jane Smith"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:98
+msgid "Chief Operating Officer"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:101
+msgid "Team Member 2"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:102
+msgid "Emily Johnson"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:103
+msgid "Marketing Manager"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:107
+msgid "Why Choose Us?"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:109
+msgid "Wide variety of high-quality products."
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:110
+msgid "Affordable prices with special discounts."
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:111
+msgid "Excellent customer service."
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:112
+msgid "Fast and reliable shipping."
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:113
+msgid "A secure and easy shopping experience."
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:6
+#: .\shop\templates\shop\other\privacy.html:45
+#: .\shop\templates\shop\other\privacy.html:50
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:52
+#: .\shop\templates\shop\other\terms.html:51
+msgid "Introduction"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:53
+msgid ""
+"Welcome to our Privacy Policy page. Your privacy is of paramount importance "
+"to us. This Privacy Policy outlines the types of personal information that "
+"is received and collected by us and how it is used."
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:55
+msgid "Information We Collect"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:56
+msgid ""
+"We collect personal information when you use our services, make purchases, "
+"or interact with our website. The types of personal information we collect "
+"may include:"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:58
+msgid "Your name and contact details"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:59
+msgid "Billing and shipping address"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:60
+msgid "Payment information"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:61
+msgid "Order history"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:62
+msgid "Other information necessary for providing our services"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:65
+msgid "How We Use Your Information"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:66
+msgid ""
+"We use your information to provide, improve, and personalize our services. "
+"Some of the key ways we use your personal information include:"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:68
+msgid "Processing orders and transactions"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:69
+msgid "Providing customer support"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:70
+msgid "Personalizing your shopping experience"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:71
+msgid "Sending promotional offers, newsletters, and updates"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:72
+msgid "Complying with legal obligations"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:75
+msgid "Sharing Your Information"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:76
+msgid ""
+"We do not sell, trade, or rent your personal information to third parties. "
+"However, we may share your personal information in the following cases:"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:78
+msgid ""
+"With service providers who help us deliver our services (e.g., payment "
+"processors, shipping companies)"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:79
+msgid "To comply with legal obligations or enforce our terms and conditions"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:80
+msgid "In the event of a business transaction such as a merger or acquisition"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:83
+msgid "Cookies and Tracking Technologies"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:84
+msgid ""
+"We use cookies and other tracking technologies to enhance your experience on "
+"our site. These technologies help us analyze trends, track user movements, "
+"and gather demographic information to improve our website."
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:86
+msgid "Your Rights and Choices"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:87
+msgid ""
+"You have the right to access, correct, and delete your personal information. "
+"You can also opt-out of receiving marketing communications from us by "
+"following the unsubscribe link in the emails or contacting us directly."
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:89
+msgid "Data Security"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:90
+msgid ""
+"We take reasonable precautions to protect your personal information from "
+"unauthorized access, alteration, disclosure, or destruction. However, no "
+"method of transmission over the internet is completely secure, and we cannot "
+"guarantee the absolute security of your data."
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:92
+msgid "Changes to This Privacy Policy"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:93
+msgid ""
+"We may update this Privacy Policy from time to time. When we make changes, "
+"we will post the updated policy on this page with an updated date. Please "
+"review this page regularly to stay informed about how we are protecting your "
+"information."
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:95
+msgid "Contact Us"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:96
+msgid ""
+"If you have any questions or concerns about our Privacy Policy, please "
+"contact us at:"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:98
+#: .\shop\templates\shop\other\terms.html:84
+msgid "Email: support@yourdomain.com"
+msgstr ""
+
+#: .\shop\templates\shop\other\privacy.html:99
+#: .\shop\templates\shop\other\terms.html:85
+msgid "Phone: +123456789"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:6
+#: .\shop\templates\shop\other\terms.html:44
+#: .\shop\templates\shop\other\terms.html:49
+msgid "Terms and Conditions"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:52
+msgid ""
+"These Terms and Conditions govern the use of our website and services. By "
+"accessing or using our website, you agree to be bound by these terms."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:54
+msgid "Intellectual Property"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:55
+msgid ""
+"All content, images, designs, and trademarks on this website are the "
+"intellectual property of the company and may not be reproduced or used "
+"without permission."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:57
+msgid "Account Registration"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:58
+msgid ""
+"To use certain features of the website, you may be required to register an "
+"account. You agree to provide accurate information and maintain the security "
+"of your account."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:60
+msgid "Product Information and Pricing"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:61
+msgid ""
+"We strive to provide accurate and up-to-date information about the products "
+"available on our website. However, we do not guarantee the accuracy of "
+"product descriptions, pricing, or availability."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:63
+msgid "Orders and Payment"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:64
+msgid ""
+"By placing an order, you are offering to purchase a product subject to these "
+"terms. We reserve the right to accept or reject your order for any reason."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:66
+msgid "Shipping and Delivery"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:67
+msgid ""
+"We will make reasonable efforts to deliver products within the specified "
+"timeframe. However, delivery times may vary depending on various factors, "
+"including shipping carrier and destination."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:69
+msgid "Returns and Refunds"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:70
+msgid ""
+"If you are not satisfied with your purchase, you may return it within a "
+"specified period (as per our return policy). Refunds will be issued in "
+"accordance with our refund policy."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:72
+msgid "Limitation of Liability"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:73
+msgid ""
+"We are not liable for any indirect, incidental, or consequential damages "
+"resulting from the use or inability to use our website or products."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:75
+msgid "Governing Law"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:76
+msgid ""
+"These Terms and Conditions shall be governed by and construed in accordance "
+"with the laws of the jurisdiction in which the company is based."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:78
+msgid "Modifications to Terms"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:79
+msgid ""
+"We reserve the right to modify these Terms and Conditions at any time. "
+"Changes will be posted on this page, and by continuing to use the website, "
+"you agree to be bound by the updated terms."
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:81
+msgid "Contact Information"
+msgstr ""
+
+#: .\shop\templates\shop\other\terms.html:82
+msgid ""
+"If you have any questions about these Terms and Conditions, please contact "
+"us at:"
+msgstr ""
+
+#: .\shop\templates\shop\pagination.html:5
+#: .\shop\templates\shop\pagination.html:8
+msgid "First"
+msgstr ""
+
+#: .\shop\templates\shop\pagination.html:20
+#: .\shop\templates\shop\pagination.html:23
+msgid "Last"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:35
+msgid "Go back"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:79
+msgid "Add to cart"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:86
+msgid "People who bought this also bought"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:118
+msgid "No products available."
+msgstr ""

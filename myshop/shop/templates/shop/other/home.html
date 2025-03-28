@@ -1,0 +1,247 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %} 
+
+{% block title %}
+  {% trans "Home" %}
+{% endblock %} 
+
+{% block content %}
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators d-none d-xl-flex">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner position-relative">
+    <div class="carousel-item active">
+      <div
+        class="banner"
+        style="background-image: url({% static 'img/banner.jpg' %})"
+      ></div>
+      <div class="carousel-caption">
+        <h1>The Sphere Collection</h1>
+        <p>
+          Sophisticated, luxurious perfumes that infuse your home with an
+          inviting, intriguing scent. Once used to our refined perfumes, your
+          home won’t feel like home without ONNO Collection.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div
+        class="banner"
+        style="background-image: url({% static 'img/banner2rez.jpg' %})"
+      ></div>
+      <div class="carousel-caption">
+        <h1>The Cape Collection</h1>
+        <p>
+          Sophisticated, luxurious perfumes that infuse your home with an
+          inviting, intriguing scent. Once used to our refined perfumes, your
+          home won’t feel like home without ONNO Collection.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div
+        class="banner"
+        style="background-image: url({% static 'img/banner3rez.jpg' %})"
+      ></div>
+      <div class="carousel-caption">
+        <h1>The Nature Collection</h1>
+        <p>
+          Sophisticated, luxurious perfumes that infuse your home with an
+          inviting, intriguing scent. Once used to our refined perfumes, your
+          home won’t feel like home without ONNO Collection.
+        </p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Marketing messaging and featurettes
+  ================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container-fluid custom-container-fluid marketing pb-5">
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-lg-4">
+      <img
+        class="rounded-circle border border-3 mb-3"
+        src="{% static 'img/f3.jpg' %}"
+        alt=""
+      />
+
+      <h2 class="fw-normal">Glossy Black Glass Candle</h2>
+      <p>Designs that blend global scents and cultures.</p>
+      <p><a class="btn btn-dark" href="#">View details &raquo;</a></p>
+    </div>
+    <!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img
+        class="rounded-circle border border-3 mb-3"
+        src="{% static 'img/f2.webp' %}"
+        alt=""
+      />
+
+      <h2 class="fw-normal">Handmade with High Quality</h2>
+      <p>Products crafted with care to reflect luxury and excellence.</p>
+      <p><a class="btn btn-dark" href="#">View details &raquo;</a></p>
+    </div>
+    <!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img
+        class="rounded-circle border border-3 mb-3"
+        src="{% static 'img/f1.webp' %}"
+        alt=""
+      />
+
+      <h2 class="fw-normal">Free Shipping for Large Orders</h2>
+      <p>Enjoy free delivery on orders worth 150 euros or more.</p>
+      <p><a class="btn btn-dark" href="#">View details &raquo;</a></p>
+    </div>
+    <!-- /.col-lg-4 -->
+  </div>
+  <!-- /.row -->
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider" />
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">
+        Handmade <span class="text-muted">& Exclusive</span>
+      </h2>
+      <p class="lead">
+        Come home, take a deep breath, relax and enjoy our exclusive perfumes
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img
+        width="500"
+        height="500"
+        class="shadow-sm border border-3 bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+        src="{% static 'img/leaf.webp' %}"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <hr class="featurette-divider" />
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading fw-normal lh-1">
+        ONNO Collection
+        <span class="text-muted"> Diffusers for every day </span>
+      </h2>
+      <p class="lead">
+        Our exclusive perfumes tell a story of exotic lands and faraway places
+      </p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img
+        width="500"
+        height="500"
+        class="shadow-sm border border-3 border-secondary bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+        src="{% static 'img/logo.webp' %}"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <hr class="featurette-divider" />
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">
+        New <span class="text-muted">The New Haute Parfumerie Collection</span>
+      </h2>
+      <p class="lead">
+        Discover our haute parfumerie collection. You are never fully dressed
+        without.
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img
+        width="500"
+        height="500"
+        class="shadow-sm border border-3 border-warning bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+        src="{% static 'img/logo2.webp' %}"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <hr class="featurette-divider" />
+
+  <div class="row featurette">
+    <div class="col-lg-7 order-lg-2">
+      <h2 class="featurette-heading fw-normal lh-1">
+        Our story
+        <br />
+        <span class="text-muted"> 'But could I really do it?' </span>
+      </h2>
+      <p class="lead">
+        All it took was a journey to the exotic plains of Africa. It was the
+        feeling I encountered over there that has made ONNO Collection to what
+        it is now. I remember the feeling so vividly; a magical sense of
+        belonging and calm yet at the same time the experience of exhilaration
+        as I discovered the rich scents and seductive textures of an exotic
+        land. It was one of my dreams to bring this magical sense of belonging
+        to you. This is what ONNO Collection represents.
+      </p>
+    </div>
+    <div class="col-lg-5 order-lg-1 text-lg-center">
+      <img
+        width="500"
+        height="500"
+        class="shadow-sm border border-3 border bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+        src="{% static 'img/onno_ilse_crop.webp' %}"
+        alt=""
+      />
+      <p class="mt-2">ONNO Collection designer & founder – Ilse Vandeputte</p>
+    </div>
+  </div>
+
+  <!-- /END THE FEATURETTES -->
+</div>
+<!-- /.container -->
+{% endblock %}

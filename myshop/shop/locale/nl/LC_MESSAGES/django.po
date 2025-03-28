@@ -1,0 +1,681 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 19:59+0200\n"
+"PO-Revision-Date: 2025-03-26 21:04+0000\n"
+"Last-Translator: Mahmoud Ouda <admin@admin.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\shop\models.py:9 .\shop\models.py:31
+msgid "name"
+msgstr "naam"
+
+#: .\shop\models.py:10 .\shop\models.py:32
+msgid "slug"
+msgstr "naaktslak"
+
+#: .\shop\models.py:33
+msgid "description"
+msgstr "beschrijving"
+
+#: .\shop\models.py:36
+msgid "category"
+msgstr "categorie"
+
+#: .\shop\models.py:39
+msgid "image"
+msgstr "afbeelding"
+
+#: .\shop\models.py:42
+msgid "price"
+msgstr "prijs"
+
+#: .\shop\models.py:45
+msgid "available"
+msgstr "beschikbaar"
+
+#: .\shop\models.py:46
+msgid "created"
+msgstr "gecreëerd"
+
+#: .\shop\models.py:47
+msgid "updated"
+msgstr "bijgewerkt"
+
+#: .\shop\templates\shop\base.html:12
+msgid "My shop"
+msgstr "Mijn winkel"
+
+#: .\shop\templates\shop\footer.html:11
+msgid "Quick Links"
+msgstr "Snelle links"
+
+#: .\shop\templates\shop\footer.html:13 .\shop\templates\shop\header.html:16
+#: .\shop\templates\shop\old_header.html:108
+#: .\shop\templates\shop\other\about_us.html:70
+#: .\shop\templates\shop\other\home.html:6
+#: .\shop\templates\shop\other\privacy.html:42
+#: .\shop\templates\shop\other\terms.html:41
+#: .\shop\templates\shop\product\detail.html:25
+#: .\shop\templates\shop\product\list.html:18
+msgid "Home"
+msgstr "Thuis"
+
+#: .\shop\templates\shop\footer.html:14 .\shop\templates\shop\header.html:22
+#: .\shop\templates\shop\old_header.html:17
+#: .\shop\templates\shop\old_header.html:113
+#: .\shop\templates\shop\product\detail.html:28
+#: .\shop\templates\shop\product\list.html:9
+#: .\shop\templates\shop\product\list.html:21
+#: .\shop\templates\shop\product\list.html:76
+msgid "Products"
+msgstr "Producten"
+
+#: .\shop\templates\shop\footer.html:15 .\shop\templates\shop\header.html:58
+msgid "My cart"
+msgstr "Mijn winkelwagen"
+
+#: .\shop\templates\shop\footer.html:19
+msgid "Contact"
+msgstr "Contact"
+
+#: .\shop\templates\shop\footer.html:21
+msgid "Email"
+msgstr "E-mail"
+
+#: .\shop\templates\shop\footer.html:22
+msgid "Phone"
+msgstr "Telefoon"
+
+#: .\shop\templates\shop\footer.html:33
+msgid "About"
+msgstr "Over"
+
+#: .\shop\templates\shop\footer.html:35
+msgid "Learn more about us"
+msgstr "Leer meer over ons"
+
+#: .\shop\templates\shop\footer.html:37
+msgid "Privacy"
+msgstr "Privacy"
+
+#: .\shop\templates\shop\footer.html:38
+msgid "Terms"
+msgstr "Voorwaarden"
+
+#: .\shop\templates\shop\footer.html:42
+msgid "Newsletter"
+msgstr "Nieuwsbrief"
+
+#: .\shop\templates\shop\footer.html:43
+msgid "Subscribe to get the latest updates and offers."
+msgstr "Abonneer u om de laatste updates en aanbiedingen te ontvangen."
+
+#: .\shop\templates\shop\footer.html:45
+msgid "Enter your email"
+msgstr "Voer uw e-mailadres in"
+
+#: .\shop\templates\shop\footer.html:46
+msgid "Subscribe"
+msgstr "Abonneren"
+
+#: .\shop\templates\shop\header.html:34
+msgid "My account"
+msgstr "Mijn account"
+
+#: .\shop\templates\shop\header.html:40
+#: .\shop\templates\shop\old_header.html:60
+msgid "Logout"
+msgstr "Uitloggen"
+
+#: .\shop\templates\shop\header.html:50
+#: .\shop\templates\shop\old_header.html:67
+msgid "Login"
+msgstr "Login"
+
+#: .\shop\templates\shop\header.html:67
+#: .\shop\templates\shop\old_header.html:75
+msgid "Language"
+msgstr "Taal"
+
+#: .\shop\templates\shop\header.html:85
+msgid "Search"
+msgstr "Zoekopdracht"
+
+#: .\shop\templates\shop\old_header.html:30
+msgid "Your cart"
+msgstr "Uw winkelwagen"
+
+#: .\shop\templates\shop\old_header.html:32
+#, python-format
+msgid ""
+"\n"
+"              %(items)s item, $%(total)s\n"
+"              "
+msgid_plural ""
+"\n"
+"              %(items)s items, $%(total)s\n"
+"              "
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\shop\templates\shop\old_header.html:41
+msgid "Your cart is empty."
+msgstr "Uw winkelwagen is leeg."
+
+#: .\shop\templates\shop\old_header.html:53
+msgid "Profile"
+msgstr "Profiel"
+
+#: .\shop\templates\shop\old_header.html:118
+#: .\shop\templates\shop\product\list.html:84
+msgid "Categories"
+msgstr "Categorieën"
+
+#: .\shop\templates\shop\old_header.html:123
+#: .\shop\templates\shop\product\list.html:87
+msgid "All"
+msgstr "Alle"
+
+#: .\shop\templates\shop\other\about_us.html:6
+#: .\shop\templates\shop\other\about_us.html:73
+#: .\shop\templates\shop\other\about_us.html:78
+#: .\shop\templates\shop\other\about_us.html:80
+msgid "About Us"
+msgstr "Over ons"
+
+#: .\shop\templates\shop\other\about_us.html:82
+msgid "Our Story"
+msgstr "Ons verhaal"
+
+#: .\shop\templates\shop\other\about_us.html:83
+msgid ""
+"We are a passionate team of individuals who have come together to bring you "
+"the best shopping experience. Our journey started with a vision to offer "
+"high-quality products at affordable prices, all while providing excellent "
+"customer service. We believe in building long-term relationships with our "
+"customers and ensuring their satisfaction."
+msgstr ""
+"Wij zijn een gepassioneerd team van individuen die samen zijn gekomen om u "
+"de beste winkelervaring te bieden. Onze reis begon met een visie om "
+"hoogwaardige producten aan te bieden tegen betaalbare prijzen, terwijl we "
+"tegelijkertijd uitstekende klantenservice bieden. Wij geloven in het "
+"opbouwen van langetermijnrelaties met onze klanten en het verzekeren van hun"
+" tevredenheid."
+
+#: .\shop\templates\shop\other\about_us.html:85
+msgid "Our Mission"
+msgstr "Onze missie"
+
+#: .\shop\templates\shop\other\about_us.html:86
+msgid ""
+"Our mission is to offer a diverse range of high-quality products that cater "
+"to the needs of our customers. We are committed to offering fast, reliable, "
+"and convenient shopping experiences through our online platform, ensuring "
+"that you have access to the best products at the best prices."
+msgstr ""
+"Onze missie is om een ​​divers aanbod van hoogwaardige producten te bieden "
+"die voldoen aan de behoeften van onze klanten. We streven ernaar om snelle, "
+"betrouwbare en gemakkelijke winkelervaringen te bieden via ons online "
+"platform, zodat u toegang hebt tot de beste producten tegen de beste "
+"prijzen."
+
+#: .\shop\templates\shop\other\about_us.html:88
+msgid "Meet the Team"
+msgstr "Maak kennis met het team"
+
+#: .\shop\templates\shop\other\about_us.html:91
+msgid "Team Member 1"
+msgstr "Teamlid 1"
+
+#: .\shop\templates\shop\other\about_us.html:92
+msgid "John Doe"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:93
+msgid "Founder & CEO"
+msgstr "Oprichter en CEO"
+
+#: .\shop\templates\shop\other\about_us.html:96
+msgid "Team Member 3"
+msgstr "Teamlid 3"
+
+#: .\shop\templates\shop\other\about_us.html:97
+msgid "Jane Smith"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:98
+msgid "Chief Operating Officer"
+msgstr "Hoofd operationeel directeur"
+
+#: .\shop\templates\shop\other\about_us.html:101
+msgid "Team Member 2"
+msgstr "Teamlid 2"
+
+#: .\shop\templates\shop\other\about_us.html:102
+msgid "Emily Johnson"
+msgstr ""
+
+#: .\shop\templates\shop\other\about_us.html:103
+msgid "Marketing Manager"
+msgstr "Marketingmanager"
+
+#: .\shop\templates\shop\other\about_us.html:107
+msgid "Why Choose Us?"
+msgstr "Waarom zou u voor ons kiezen?"
+
+#: .\shop\templates\shop\other\about_us.html:109
+msgid "Wide variety of high-quality products."
+msgstr "Grote verscheidenheid aan hoogwaardige producten."
+
+#: .\shop\templates\shop\other\about_us.html:110
+msgid "Affordable prices with special discounts."
+msgstr "Betaalbare prijzen met speciale kortingen."
+
+#: .\shop\templates\shop\other\about_us.html:111
+msgid "Excellent customer service."
+msgstr "Uitstekende klantenservice."
+
+#: .\shop\templates\shop\other\about_us.html:112
+msgid "Fast and reliable shipping."
+msgstr "Snelle en betrouwbare verzending."
+
+#: .\shop\templates\shop\other\about_us.html:113
+msgid "A secure and easy shopping experience."
+msgstr "Een veilige en gemakkelijke winkelervaring."
+
+#: .\shop\templates\shop\other\privacy.html:6
+#: .\shop\templates\shop\other\privacy.html:45
+#: .\shop\templates\shop\other\privacy.html:50
+msgid "Privacy Policy"
+msgstr "Privacybeleid"
+
+#: .\shop\templates\shop\other\privacy.html:52
+#: .\shop\templates\shop\other\terms.html:51
+msgid "Introduction"
+msgstr "Invoering"
+
+#: .\shop\templates\shop\other\privacy.html:53
+msgid ""
+"Welcome to our Privacy Policy page. Your privacy is of paramount importance "
+"to us. This Privacy Policy outlines the types of personal information that "
+"is received and collected by us and how it is used."
+msgstr ""
+"Welkom op onze Privacy Policy pagina. Uw privacy is van het grootste belang "
+"voor ons. Dit Privacy Policy beschrijft de soorten persoonlijke informatie "
+"die door ons wordt ontvangen en verzameld en hoe deze wordt gebruikt."
+
+#: .\shop\templates\shop\other\privacy.html:55
+msgid "Information We Collect"
+msgstr "Informatie die wij verzamelen"
+
+#: .\shop\templates\shop\other\privacy.html:56
+msgid ""
+"We collect personal information when you use our services, make purchases, "
+"or interact with our website. The types of personal information we collect "
+"may include:"
+msgstr ""
+"We verzamelen persoonlijke informatie wanneer u onze diensten gebruikt, "
+"aankopen doet of met onze website communiceert. De soorten persoonlijke "
+"informatie die we verzamelen kunnen het volgende omvatten:"
+
+#: .\shop\templates\shop\other\privacy.html:58
+msgid "Your name and contact details"
+msgstr "Uw naam en contactgegevens"
+
+#: .\shop\templates\shop\other\privacy.html:59
+msgid "Billing and shipping address"
+msgstr "Factuur- en verzendadres"
+
+#: .\shop\templates\shop\other\privacy.html:60
+msgid "Payment information"
+msgstr "Betalingsinformatie"
+
+#: .\shop\templates\shop\other\privacy.html:61
+msgid "Order history"
+msgstr "Bestelgeschiedenis"
+
+#: .\shop\templates\shop\other\privacy.html:62
+msgid "Other information necessary for providing our services"
+msgstr ""
+"Overige informatie die noodzakelijk is voor het verlenen van onze diensten"
+
+#: .\shop\templates\shop\other\privacy.html:65
+msgid "How We Use Your Information"
+msgstr "Hoe wij uw informatie gebruiken"
+
+#: .\shop\templates\shop\other\privacy.html:66
+msgid ""
+"We use your information to provide, improve, and personalize our services. "
+"Some of the key ways we use your personal information include:"
+msgstr ""
+"Wij gebruiken uw informatie om onze diensten te leveren, verbeteren en "
+"personaliseren. Enkele van de belangrijkste manieren waarop wij uw "
+"persoonlijke informatie gebruiken, zijn:"
+
+#: .\shop\templates\shop\other\privacy.html:68
+msgid "Processing orders and transactions"
+msgstr "Bestellingen en transacties verwerken"
+
+#: .\shop\templates\shop\other\privacy.html:69
+msgid "Providing customer support"
+msgstr "Klantenondersteuning bieden"
+
+#: .\shop\templates\shop\other\privacy.html:70
+msgid "Personalizing your shopping experience"
+msgstr "Personaliseer uw winkelervaring"
+
+#: .\shop\templates\shop\other\privacy.html:71
+msgid "Sending promotional offers, newsletters, and updates"
+msgstr "Het verzenden van promotionele aanbiedingen, nieuwsbrieven en updates"
+
+#: .\shop\templates\shop\other\privacy.html:72
+msgid "Complying with legal obligations"
+msgstr "Voldoen aan wettelijke verplichtingen"
+
+#: .\shop\templates\shop\other\privacy.html:75
+msgid "Sharing Your Information"
+msgstr "Uw informatie delen"
+
+#: .\shop\templates\shop\other\privacy.html:76
+msgid ""
+"We do not sell, trade, or rent your personal information to third parties. "
+"However, we may share your personal information in the following cases:"
+msgstr ""
+"Wij verkopen, verhandelen of verhuren uw persoonlijke informatie niet aan "
+"derden. Wij kunnen uw persoonlijke informatie echter wel delen in de "
+"volgende gevallen:"
+
+#: .\shop\templates\shop\other\privacy.html:78
+msgid ""
+"With service providers who help us deliver our services (e.g., payment "
+"processors, shipping companies)"
+msgstr ""
+"Met dienstverleners die ons helpen onze diensten te leveren (bijv. "
+"betalingsverwerkers, transportbedrijven)"
+
+#: .\shop\templates\shop\other\privacy.html:79
+msgid "To comply with legal obligations or enforce our terms and conditions"
+msgstr ""
+"Om te voldoen aan wettelijke verplichtingen of om onze algemene voorwaarden "
+"af ​​te dwingen"
+
+#: .\shop\templates\shop\other\privacy.html:80
+msgid "In the event of a business transaction such as a merger or acquisition"
+msgstr "In het geval van een zakelijke transactie zoals een fusie of overname"
+
+#: .\shop\templates\shop\other\privacy.html:83
+msgid "Cookies and Tracking Technologies"
+msgstr "Cookies en trackingtechnologieën"
+
+#: .\shop\templates\shop\other\privacy.html:84
+msgid ""
+"We use cookies and other tracking technologies to enhance your experience on"
+" our site. These technologies help us analyze trends, track user movements, "
+"and gather demographic information to improve our website."
+msgstr ""
+"We gebruiken cookies en andere trackingtechnologieën om uw ervaring op onze "
+"site te verbeteren. Deze technologieën helpen ons trends te analyseren, "
+"gebruikersbewegingen te volgen en demografische informatie te verzamelen om "
+"onze website te verbeteren."
+
+#: .\shop\templates\shop\other\privacy.html:86
+msgid "Your Rights and Choices"
+msgstr "Uw rechten en keuzes"
+
+#: .\shop\templates\shop\other\privacy.html:87
+msgid ""
+"You have the right to access, correct, and delete your personal information."
+" You can also opt-out of receiving marketing communications from us by "
+"following the unsubscribe link in the emails or contacting us directly."
+msgstr ""
+"U hebt het recht om uw persoonlijke gegevens in te zien, te corrigeren en te"
+" verwijderen. U kunt zich ook afmelden voor marketingcommunicatie van ons "
+"door de afmeldlink in de e-mails te volgen of rechtstreeks contact met ons "
+"op te nemen."
+
+#: .\shop\templates\shop\other\privacy.html:89
+msgid "Data Security"
+msgstr "Gegevensbeveiliging"
+
+#: .\shop\templates\shop\other\privacy.html:90
+msgid ""
+"We take reasonable precautions to protect your personal information from "
+"unauthorized access, alteration, disclosure, or destruction. However, no "
+"method of transmission over the internet is completely secure, and we cannot"
+" guarantee the absolute security of your data."
+msgstr ""
+"Wij nemen redelijke voorzorgsmaatregelen om uw persoonlijke informatie te "
+"beschermen tegen ongeautoriseerde toegang, wijziging, openbaarmaking of "
+"vernietiging. Echter, geen enkele methode van verzending via het internet is"
+" volledig veilig en wij kunnen de absolute veiligheid van uw gegevens niet "
+"garanderen."
+
+#: .\shop\templates\shop\other\privacy.html:92
+msgid "Changes to This Privacy Policy"
+msgstr "Wijzigingen in dit privacybeleid"
+
+#: .\shop\templates\shop\other\privacy.html:93
+msgid ""
+"We may update this Privacy Policy from time to time. When we make changes, "
+"we will post the updated policy on this page with an updated date. Please "
+"review this page regularly to stay informed about how we are protecting your"
+" information."
+msgstr ""
+"We kunnen dit Privacybeleid van tijd tot tijd bijwerken. Wanneer we "
+"wijzigingen aanbrengen, plaatsen we het bijgewerkte beleid op deze pagina "
+"met een bijgewerkte datum. Bekijk deze pagina regelmatig om op de hoogte te "
+"blijven van hoe we uw informatie beschermen."
+
+#: .\shop\templates\shop\other\privacy.html:95
+msgid "Contact Us"
+msgstr "Neem contact met ons op"
+
+#: .\shop\templates\shop\other\privacy.html:96
+msgid ""
+"If you have any questions or concerns about our Privacy Policy, please "
+"contact us at:"
+msgstr ""
+"Als u vragen of opmerkingen heeft over ons privacybeleid, neem dan contact "
+"met ons op via:"
+
+#: .\shop\templates\shop\other\privacy.html:98
+#: .\shop\templates\shop\other\terms.html:84
+msgid "Email: support@yourdomain.com"
+msgstr "E-mailadres: support@uwdomein.com"
+
+#: .\shop\templates\shop\other\privacy.html:99
+#: .\shop\templates\shop\other\terms.html:85
+msgid "Phone: +123456789"
+msgstr "Telefoon: +123456789"
+
+#: .\shop\templates\shop\other\terms.html:6
+#: .\shop\templates\shop\other\terms.html:44
+#: .\shop\templates\shop\other\terms.html:49
+msgid "Terms and Conditions"
+msgstr "Algemene voorwaarden"
+
+#: .\shop\templates\shop\other\terms.html:52
+msgid ""
+"These Terms and Conditions govern the use of our website and services. By "
+"accessing or using our website, you agree to be bound by these terms."
+msgstr ""
+"Deze Algemene Voorwaarden regelen het gebruik van onze website en diensten. "
+"Door onze website te bezoeken of te gebruiken, gaat u ermee akkoord gebonden"
+" te zijn aan deze voorwaarden."
+
+#: .\shop\templates\shop\other\terms.html:54
+msgid "Intellectual Property"
+msgstr "Intellectueel eigendom"
+
+#: .\shop\templates\shop\other\terms.html:55
+msgid ""
+"All content, images, designs, and trademarks on this website are the "
+"intellectual property of the company and may not be reproduced or used "
+"without permission."
+msgstr ""
+"Alle inhoud, afbeeldingen, ontwerpen en handelsmerken op deze website zijn "
+"het intellectuele eigendom van het bedrijf en mogen niet zonder toestemming "
+"worden gereproduceerd of gebruikt."
+
+#: .\shop\templates\shop\other\terms.html:57
+msgid "Account Registration"
+msgstr "Accountregistratie"
+
+#: .\shop\templates\shop\other\terms.html:58
+msgid ""
+"To use certain features of the website, you may be required to register an "
+"account. You agree to provide accurate information and maintain the security"
+" of your account."
+msgstr ""
+"Om bepaalde functies van de website te gebruiken, moet u mogelijk een "
+"account registreren. U stemt ermee in om nauwkeurige informatie te "
+"verstrekken en de veiligheid van uw account te handhaven."
+
+#: .\shop\templates\shop\other\terms.html:60
+msgid "Product Information and Pricing"
+msgstr "Productinformatie en prijzen"
+
+#: .\shop\templates\shop\other\terms.html:61
+msgid ""
+"We strive to provide accurate and up-to-date information about the products "
+"available on our website. However, we do not guarantee the accuracy of "
+"product descriptions, pricing, or availability."
+msgstr ""
+"Wij streven ernaar om nauwkeurige en actuele informatie te verstrekken over "
+"de producten die beschikbaar zijn op onze website. Wij garanderen echter "
+"niet de nauwkeurigheid van productbeschrijvingen, prijzen of "
+"beschikbaarheid."
+
+#: .\shop\templates\shop\other\terms.html:63
+msgid "Orders and Payment"
+msgstr "Bestellingen en betalingen"
+
+#: .\shop\templates\shop\other\terms.html:64
+msgid ""
+"By placing an order, you are offering to purchase a product subject to these"
+" terms. We reserve the right to accept or reject your order for any reason."
+msgstr ""
+"Door een bestelling te plaatsen, biedt u aan een product te kopen dat "
+"onderworpen is aan deze voorwaarden. Wij behouden ons het recht voor om uw "
+"bestelling om welke reden dan ook te accepteren of te weigeren."
+
+#: .\shop\templates\shop\other\terms.html:66
+msgid "Shipping and Delivery"
+msgstr "Verzending en levering"
+
+#: .\shop\templates\shop\other\terms.html:67
+msgid ""
+"We will make reasonable efforts to deliver products within the specified "
+"timeframe. However, delivery times may vary depending on various factors, "
+"including shipping carrier and destination."
+msgstr ""
+"We zullen redelijke inspanningen leveren om producten binnen het opgegeven "
+"tijdsbestek te leveren. Levertijden kunnen echter variëren afhankelijk van "
+"verschillende factoren, waaronder de vervoerder en de bestemming."
+
+#: .\shop\templates\shop\other\terms.html:69
+msgid "Returns and Refunds"
+msgstr "Retourneren en restituties"
+
+#: .\shop\templates\shop\other\terms.html:70
+msgid ""
+"If you are not satisfied with your purchase, you may return it within a "
+"specified period (as per our return policy). Refunds will be issued in "
+"accordance with our refund policy."
+msgstr ""
+"Als u niet tevreden bent met uw aankoop, kunt u deze binnen een bepaalde "
+"periode retourneren (conform ons retourbeleid). Restituties worden "
+"uitgegeven in overeenstemming met ons restitutiebeleid."
+
+#: .\shop\templates\shop\other\terms.html:72
+msgid "Limitation of Liability"
+msgstr "Beperking van aansprakelijkheid"
+
+#: .\shop\templates\shop\other\terms.html:73
+msgid ""
+"We are not liable for any indirect, incidental, or consequential damages "
+"resulting from the use or inability to use our website or products."
+msgstr ""
+"Wij zijn niet aansprakelijk voor enige indirecte, incidentele of "
+"gevolgschade die voortvloeit uit het gebruik of het niet kunnen gebruiken "
+"van onze website of producten."
+
+#: .\shop\templates\shop\other\terms.html:75
+msgid "Governing Law"
+msgstr "Toepasselijk recht"
+
+#: .\shop\templates\shop\other\terms.html:76
+msgid ""
+"These Terms and Conditions shall be governed by and construed in accordance "
+"with the laws of the jurisdiction in which the company is based."
+msgstr ""
+"Deze Algemene Voorwaarden worden beheerst door en geïnterpreteerd in "
+"overeenstemming met de wetten van het rechtsgebied waarin het bedrijf is "
+"gevestigd."
+
+#: .\shop\templates\shop\other\terms.html:78
+msgid "Modifications to Terms"
+msgstr "Wijzigingen in de voorwaarden"
+
+#: .\shop\templates\shop\other\terms.html:79
+msgid ""
+"We reserve the right to modify these Terms and Conditions at any time. "
+"Changes will be posted on this page, and by continuing to use the website, "
+"you agree to be bound by the updated terms."
+msgstr ""
+"Wij behouden ons het recht voor om deze Algemene Voorwaarden op elk gewenst "
+"moment te wijzigen. Wijzigingen worden op deze pagina geplaatst en door de "
+"website te blijven gebruiken, stemt u ermee in gebonden te zijn aan de "
+"bijgewerkte voorwaarden."
+
+#: .\shop\templates\shop\other\terms.html:81
+msgid "Contact Information"
+msgstr "Contactgegevens"
+
+#: .\shop\templates\shop\other\terms.html:82
+msgid ""
+"If you have any questions about these Terms and Conditions, please contact "
+"us at:"
+msgstr ""
+"Als u vragen heeft over deze Algemene Voorwaarden, kunt u contact met ons "
+"opnemen via:"
+
+#: .\shop\templates\shop\pagination.html:5
+#: .\shop\templates\shop\pagination.html:8
+msgid "First"
+msgstr "Eerst"
+
+#: .\shop\templates\shop\pagination.html:20
+#: .\shop\templates\shop\pagination.html:23
+msgid "Last"
+msgstr "Laatst"
+
+#: .\shop\templates\shop\product\detail.html:35
+msgid "Go back"
+msgstr "Ga terug"
+
+#: .\shop\templates\shop\product\detail.html:79
+msgid "Add to cart"
+msgstr "In winkelwagen"
+
+#: .\shop\templates\shop\product\detail.html:86
+msgid "People who bought this also bought"
+msgstr "Mensen die dit kochten, kochten ook"
+
+#: .\shop\templates\shop\product\list.html:118
+msgid "No products available."
+msgstr "Geen producten beschikbaar."

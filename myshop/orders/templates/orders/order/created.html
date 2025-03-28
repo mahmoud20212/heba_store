@@ -1,0 +1,15 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+  {% trans "Thank you" %}
+{% endblock %}
+
+{% block content %}
+<div class="py-5 container-fluid custom-container-fluid">
+  <h1>{% trans "Thank you" %}</h1>
+  <hr>
+  <p>
+    {% trans "Your order has been successfully completed. Your order number is" %} <strong>{{ order.id }}</strong>.
+  </p>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Payment successful" %}{% endblock %}
+
+{% block content %}
+<div class="py-5 container-fluid custom-container-fluid">
+  <h1>{% trans "Your payment was successful" %}</h1>
+  <hr>
+  <p>{% trans "Your payment has been processed successfully." %}</p>
+  <a class="btn btn-dark" href="{% url 'shop:home' %}">{% trans "Go back" %}</a>
+</div>
+{% endblock %}

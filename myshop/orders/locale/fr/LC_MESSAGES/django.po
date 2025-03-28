@@ -1,0 +1,284 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 19:59+0200\n"
+"PO-Revision-Date: 2025-03-25 21:49+0000\n"
+"Last-Translator: Mahmoud Ouda <admin@admin.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\orders\admin.py:31
+msgid "Export to CSV"
+msgstr "Exporter au format CSV"
+
+#: .\orders\admin.py:45 .\orders\templates\admin\orders\order\detail.html:58
+msgid "Stripe payment"
+msgstr "Paiement Stripe"
+
+#: .\orders\admin.py:49
+msgid "View"
+msgstr "Voir"
+
+#: .\orders\admin.py:55
+msgid "Invoice"
+msgstr "Facture"
+
+#: .\orders\forms.py:9
+msgid "Postal code"
+msgstr "Code Postal"
+
+#: .\orders\models.py:13
+msgid "user"
+msgstr "Utilisateur"
+
+#: .\orders\models.py:16
+msgid "first name"
+msgstr "prénom"
+
+#: .\orders\models.py:18
+msgid "last name"
+msgstr "nom de famille"
+
+#: .\orders\models.py:20
+msgid "e-mail"
+msgstr "e-mail"
+
+#: .\orders\models.py:21
+msgid "address"
+msgstr "adresse"
+
+#: .\orders\models.py:23
+msgid "postal code"
+msgstr "Code Postal"
+
+#: .\orders\models.py:25
+msgid "city"
+msgstr "ville"
+
+#: .\orders\models.py:27
+msgid "created"
+msgstr "créé"
+
+#: .\orders\models.py:28
+msgid "updated"
+msgstr "mis à jour"
+
+#: .\orders\models.py:29
+msgid "paid"
+msgstr "payé"
+
+#: .\orders\models.py:32
+msgid "coupon"
+msgstr "coupon"
+
+#: .\orders\models.py:37
+msgid "discount"
+msgstr "rabais"
+
+#: .\orders\models.py:79
+msgid "order"
+msgstr "commande"
+
+#: .\orders\models.py:83
+msgid "product"
+msgstr "produit"
+
+#: .\orders\models.py:86
+msgid "price"
+msgstr "prix"
+
+#: .\orders\models.py:89
+msgid "quantity"
+msgstr "quantité"
+
+#: .\orders\templates\admin\orders\order\detail.html:5
+#: .\orders\templates\admin\orders\order\detail.html:14
+#: .\orders\templates\admin\orders\order\detail.html:21
+msgid "Order"
+msgstr "Commande"
+
+#: .\orders\templates\admin\orders\order\detail.html:11
+#: .\orders\templates\orders\order\create.html:37
+msgid "Home"
+msgstr "Maison"
+
+#: .\orders\templates\admin\orders\order\detail.html:12
+msgid "Orders"
+msgstr "Ordres"
+
+#: .\orders\templates\admin\orders\order\detail.html:15
+msgid "Detail"
+msgstr "Détail"
+
+#: .\orders\templates\admin\orders\order\detail.html:25
+msgid "Print order"
+msgstr "Ordre d'impression"
+
+#: .\orders\templates\admin\orders\order\detail.html:31
+msgid "Created"
+msgstr "Créé"
+
+#: .\orders\templates\admin\orders\order\detail.html:35
+msgid "Customer"
+msgstr "Client"
+
+#: .\orders\templates\admin\orders\order\detail.html:39
+msgid "E-mail"
+msgstr "E-mail"
+
+#: .\orders\templates\admin\orders\order\detail.html:43
+msgid "Address"
+msgstr "Adresse"
+
+#: .\orders\templates\admin\orders\order\detail.html:50
+msgid "Total amount"
+msgstr "Montant total"
+
+#: .\orders\templates\admin\orders\order\detail.html:54
+msgid "Status"
+msgstr "Statut"
+
+#: .\orders\templates\admin\orders\order\detail.html:55
+#: .\orders\templates\orders\order\pdf.html:65
+msgid "Paid"
+msgstr "Payé"
+
+#: .\orders\templates\admin\orders\order\detail.html:55
+#: .\orders\templates\orders\order\pdf.html:65
+msgid "Pending payment"
+msgstr "Paiement en attente"
+
+#: .\orders\templates\admin\orders\order\detail.html:70
+#: .\orders\templates\orders\order\pdf.html:18
+msgid "Items bought"
+msgstr "Articles achetés"
+
+#: .\orders\templates\admin\orders\order\detail.html:74
+#: .\orders\templates\orders\order\pdf.html:22
+msgid "Product"
+msgstr "Produit"
+
+#: .\orders\templates\admin\orders\order\detail.html:75
+#: .\orders\templates\orders\order\pdf.html:23
+msgid "Price"
+msgstr "Prix"
+
+#: .\orders\templates\admin\orders\order\detail.html:76
+#: .\orders\templates\orders\order\pdf.html:24
+msgid "Quantity"
+msgstr "Quantité"
+
+#: .\orders\templates\admin\orders\order\detail.html:77
+#: .\orders\templates\admin\orders\order\detail.html:109
+#: .\orders\templates\orders\order\create.html:84
+#: .\orders\templates\orders\order\pdf.html:58
+msgid "Total"
+msgstr "Total"
+
+#: .\orders\templates\admin\orders\order\detail.html:92
+#: .\orders\templates\orders\order\pdf.html:40
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#: .\orders\templates\admin\orders\order\detail.html:99
+#, python-format
+msgid ""
+"\n"
+"              \"%(order.coupon.code)s\" coupon (%(order.discount)s%% off)\n"
+"            "
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:7
+#: .\orders\templates\orders\order\create.html:43
+#: .\orders\templates\orders\order\create.html:48
+msgid "Checkout"
+msgstr "Vérifier"
+
+#: .\orders\templates\orders\order\create.html:40
+msgid "My cart"
+msgstr "Mon panier"
+
+#: .\orders\templates\orders\order\create.html:50
+msgid ""
+"Please ensure that your shipping and payment information is accurate before "
+"submission. All transactions adhere to security standards to protect your "
+"data. If you have any questions, feel free to contact our support team."
+msgstr ""
+"Veuillez vous assurer que vos informations de livraison et de paiement sont "
+"exactes avant de soumettre votre commande. Toutes les transactions "
+"respectent les normes de sécurité pour protéger vos données. Pour toute "
+"question, n'hésitez pas à contacter notre équipe d'assistance."
+
+#: .\orders\templates\orders\order\create.html:57
+msgid "Your order"
+msgstr "Votre commande"
+
+#: .\orders\templates\orders\order\create.html:74
+#, python-format
+msgid ""
+"\n"
+"                  \"%(code)s\" (%(discount)s%% off)\n"
+"                "
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:78
+msgid "Coupon"
+msgstr "Coupon"
+
+#: .\orders\templates\orders\order\create.html:90
+msgid "Shipping address"
+msgstr "Adresse de livraison"
+
+#: .\orders\templates\orders\order\create.html:100
+msgid "Shipping address is the same as my billing address"
+msgstr "L'adresse de livraison est la même que mon adresse de facturation"
+
+#: .\orders\templates\orders\order\create.html:105
+msgid "Place order"
+msgstr "Passer commande"
+
+#: .\orders\templates\orders\order\created.html:4
+#: .\orders\templates\orders\order\created.html:9
+msgid "Thank you"
+msgstr "Merci"
+
+#: .\orders\templates\orders\order\created.html:12
+msgid "Your order has been successfully completed. Your order number is"
+msgstr ""
+"Votre commande a été finalisée avec succès. Votre numéro de commande est"
+
+#: .\orders\templates\orders\order\pdf.html:6
+msgid "Invoice no."
+msgstr "Numéro de facture"
+
+#: .\orders\templates\orders\order\pdf.html:11
+msgid "Bill to"
+msgstr "Facturer à"
+
+#: .\orders\templates\orders\order\pdf.html:25
+msgid "Cost"
+msgstr "Coût"
+
+#: .\orders\templates\orders\order\pdf.html:47
+#, python-format
+msgid ""
+"\n"
+"              \"%(code)s\" (%(discount)s%% off)\n"
+"            "
+msgstr ""
+
+#: .\orders\urls.py:10
+msgid "create/"
+msgstr ""

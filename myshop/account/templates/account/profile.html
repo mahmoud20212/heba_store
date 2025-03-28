@@ -1,0 +1,72 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block styles %}
+<!-- Include the CSS for the intl-tel-input plugin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="py-5 container-fluid custom-container-fluid">
+    {% block breadcrumb %}
+    {% endblock %}
+
+    <h1>{% trans "Welcome" %}, {{ request.user.first_name|default:request.user.username }} 👋</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="border bg-white p-3">
+                <div class="list-group list-group-flush">
+                    <a href="{% url 'edit' %}" class="list-group-item list-group-item-action {% if request.resolver_match.url_name == 'edit' %}active{% endif %}">
+                        {% trans "My account" %}
+                    </a>
+                    <a href="{% url 'user_orders' %}" class="list-group-item list-group-item-action {% if request.resolver_match.url_name == 'user_orders' %}active{% endif %}">
+                        {% trans "My orders" %}
+                    </a>
+                    <form action="{% url 'logout' %}" method="POST">
+                        {% csrf_token %}
+                        <button class="list-group-item list-group-item-action border-0">
+                            {% trans "Logout" %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            {% block account_content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- Include JS for the intl-tel-input plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script>
+    var input = document.querySelector("#phone");
+    var iti = window.intlTelInput(input, {
+        preferredCountries: ['nl', 'fr', 'de'], // countries like Netherlands, France, and Germany
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });
+
+    // Add event listener to submit the form with the international phone number
+    document.getElementById('account-form').addEventListener('submit', function(e) {
+        var phoneNumber = iti.getNumber();  // Get the full phone number with the prefix
+
+        // Get the country code (prefix) from the selected country
+        var countryCode = iti.getSelectedCountryData().dialCode;
+
+        // Remove the country code from the phone number
+        var phoneWithoutPrefix = phoneNumber.replace('+' + countryCode, '');  // Remove the country code from the number
+
+        // Add the country code back to the number when submitting the form
+        var finalPhoneNumber = '+' + countryCode + phoneWithoutPrefix;
+
+        // Set the final phone number with the country code to the form input
+        document.querySelector('input[name="phone_number"]').value = finalPhoneNumber;
+    });
+
+</script>
+{% endblock %}

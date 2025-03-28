@@ -1,0 +1,51 @@
+{% load i18n %}
+
+<footer class="bg-dark text-bg-dark">
+  <div class="container-fluid custom-container-fluid py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <h1 class="fredericka-the-great-regular">HEBA</h1>
+        <small class="d-block mb-3 text-muted">&copy; <span id="year"></span></small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>{% trans "Quick Links" %}</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="{% url 'shop:home' %}">{% trans "Home" %}</a></li>
+          <li><a class="link-secondary" href="{% url 'shop:product_list' %}">{% trans "Products" %}</a></li>
+          <li><a class="link-secondary" href="{% url 'cart:cart_detail' %}">{% trans "My cart" %}</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>{% trans "Contact" %}</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="mailto:support@yourdomain.com">{% trans "Email" %}</a></li>
+          <li><a class="link-secondary" href="tel:+123456789">{% trans "Phone" %}</a></li>
+          <li>
+            <ul class="list-unstyled d-flex gap-3 fs-2 mt-3">
+              <li><a class="text-secondary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a class="text-secondary" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a class="text-secondary" href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>{% trans "About" %}</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="{% url 'shop:about' %}">{% trans "Learn more about us" %}</a></li>
+          <!-- <li><a class="link-secondary" href="#">Locations</a></li> -->
+          <li><a class="link-secondary" href="{% url 'shop:privacy' %}">{% trans "Privacy" %}</a></li>
+          <li><a class="link-secondary" href="{% url 'shop:terms' %}">{% trans "Terms" %}</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>{% trans "Newsletter" %}</h5>
+        <p class="text-small text-secondary">{% trans "Subscribe to get the latest updates and offers." %}</p>
+        <form action="#">
+          <input type="email" placeholder="{% trans "Enter your email" %}" class="form-control mb-2">
+          <button type="reset" class="btn btn-light btn-block btn-sm">{% trans "Subscribe" %}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>

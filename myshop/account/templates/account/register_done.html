@@ -1,0 +1,26 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Welcome" %}{% endblock %}
+
+{% block content %}
+<div class="py-5 container-fluid custom-container-fluid">
+    <nav class="mb-5" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'login' %}">{% trans "Login" %}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{% trans "Create an account" %}</li>
+        </ol>
+    </nav>
+    <h1>{% trans "Welcome" %}, {{ new_user.first_name }}!</h1>
+    <hr>
+    <p class="fw-semibold">
+        {% trans "Your account has been successfully created." %}
+        {% trans "Now you can" %} <a href="{% url 'login' %}">{% trans "login" %}</a>.
+    </p>
+</div>
+{% endblock %}

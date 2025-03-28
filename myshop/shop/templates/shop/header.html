@@ -1,0 +1,99 @@
+{% load i18n %}
+
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid custom-container-fluid">
+      <a class="navbar-brand fs-2 fredericka-the-great-regular" href="{% url 'shop:home' %}">HEBA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05"
+        aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav d-flex w-100 me-auto me-md-2 mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" 
+               aria-current="page" href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'product_list' or request.resolver_match.url_name == 'product_list_by_category' %}active{% endif %}" 
+               href="{% url 'shop:product_list' %}">
+              {% trans "Products" %}
+            </a>
+          </li>
+
+          {% if request.user.is_authenticated %}
+          <li class="m-0 ms-lg-auto nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user"></i> {{ request.user.first_name|default:request.user.username }}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item {% if request.resolver_match.url_name == 'edit' %}active{% endif %}" 
+                   href="{% url 'edit' %}">{% trans "My account" %}</a>
+              </li>
+              <li>
+                <form action="{% url 'logout' %}" method="POST">
+                  {% csrf_token %}
+                  <button class="dropdown-item">
+                    {% trans "Logout" %}
+                  </button>
+                </form>
+              </li>
+            </ul>
+          </li>
+          {% else %}
+          <li class="m-0 ms-md-auto nav-item">
+            <a href="{% url 'login' %}" 
+               class="nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}">
+              {% trans "Login" %}
+            </a>
+          </li>
+          {% endif %}
+
+          <li class="nav-item">
+            <a href="{% url 'cart:cart_detail' %}" 
+               class="nav-link position-relative {% if request.resolver_match.url_name == 'cart_detail' %}active{% endif %}">
+              <i class="fa-solid fa-cart-shopping"></i> {% trans "My cart" %}
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-earth-americas"></i> {% trans "Language" %}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              {% for language in languages %}
+              <li>
+                <a class="dropdown-item {% if language.code == LANGUAGE_CODE %} active {% endif %}" href="/{{ language.code }}/">
+                  {{ language.name_local }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+
+        <div class="d-flex">
+          <!-- Search Form -->
+          <div class="collapse order-1 order-lg-0 flex-grow-1" id="searchBox">
+            <form method="get" action="{% url 'shop:product_list' %}" role="search">
+              <input class="form-control" type="search" name="q" value="{{ query|default:'' }}" placeholder="{% trans "Search" %}" aria-label="Search">
+            </form>
+          </div>
+          
+          <!-- Search Icon -->
+          <button class="order-0 order-lg-1 btn btn-link text-white-50" id="search-toggle" type="button">
+            <i class="fa-solid fa-search"></i>
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+</header>

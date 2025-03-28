@@ -1,0 +1,68 @@
+{% extends "account/profile.html" %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+{% trans "Edit your account" %}
+{% endblock %}
+
+{% block breadcrumb %}
+<nav class="mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            {% trans "My account" %}
+        </li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block account_content %}
+<div class="border bg-white p-3">
+    <div class="text-center mt-3 mb-5">
+        <img width="150" height="150" class="mb-3 shadow-sm rounded-circle border border-4" style="object-fit: cover;"
+            src="{% if request.user.profile.photo %}{{ request.user.profile.photo.url }}{% else %}{% static 'img/user.jpeg' %}{% endif %}" alt="{{ request.user.username }}">
+        <div>
+            <span style="width: 10px; height: 10px;" class="d-inline-block bg-success border-success rounded-circle"></span>
+            <span class="ms-1 text-muted mb-0">@{{ request.user.username }}</span>
+        </div>
+    </div>
+    <h3 class="mb-3">{% trans "Edit your account" %}</h3>
+    <form method="post" enctype="multipart/form-data" id="account-form">
+        <div class="mb-3">
+            <label for="id_photo" class="form-label">{% trans "Photo" %}</label>
+            <div class="py-2 px-3 border rounded bg-light">
+                {{ profile_form.photo }}
+            </div>
+        </div>
+
+        <!-- User Form -->
+        {{ user_form|crispy }}
+
+        <div class="mb-3">
+            <label for="phone" class="form-label d-block">{% trans "Phone number" %}</label>
+            <div class="{% if profile_form.phone_number.errors %}is-invalid{% endif %}">
+                <input type="tel" id="phone" name="phone_number" class="d-block w-100 form-control {% if profile_form.phone_number.errors %}is-invalid{% endif %}" value="{{ user.profile.phone_number|default:'' }}">
+            </div>
+            {% if profile_form.phone_number.errors %}
+                <div class="invalid-feedback">
+                    {% for error in profile_form.phone_number.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        {% csrf_token %}
+        <div class="mt-4">
+            <button class="btn btn-dark">{% trans "Save changes" %}</button>
+        </div>
+    </form>
+    <div class="mt-4">
+        <a href="{% url 'password_change' %}">{% trans "Change your password" %}</a>
+    </div>
+</div>
+{% endblock %}

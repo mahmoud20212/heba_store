@@ -1,0 +1,114 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  {% trans "Checkout" %}
+{% endblock %}
+
+{% block styles %}
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  label {
+    text-transform: capitalize;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="py-5 container-fluid custom-container-fluid">
+  <nav class="mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'shop:home' %}">{% trans "Home" %}</a>
+        </li>
+        <li class="breadcrumb-item" aria-current="page">
+          <a href="{% url 'cart:cart_detail' %}">{% trans "My cart" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {% trans "Checkout" %}
+        </li>
+    </ol>
+  </nav>
+  <div class="pb-5">
+    <h1>{% trans "Checkout" %}</h1>
+    <p class="lead">
+      {% trans "Please ensure that your shipping and payment information is accurate before submission. All transactions adhere to security standards to protect your data. If you have any questions, feel free to contact our support team." %}
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5 col-lg-4 order-md-last">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span>{% trans "Your order" %}</span>
+        <!-- <span class="badge bg-primary rounded-pill">3</span> -->
+      </h4>
+      <ul class="list-group rounded-0 mb-3">
+        {% for item in cart %}
+        <li class="list-group-item d-flex justify-content-between lh-sm">
+          <div>
+            <h6 class="my-0">{{ item.quantity }}x {{ item.product.name }}</h6>
+            <!-- <small class="text-muted">Brief description</small> -->
+          </div>
+          <span class="text-muted">${{ item.total_price|floatformat:2 }}</span>
+        </li>
+        {% endfor %}
+        {% if cart.coupon %}
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success">
+            <h6 class="my-0">
+                {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
+                  "{{ code }}" ({{ discount }}% off)
+                {% endblocktrans %}
+              </h6>
+              <small>{% trans "Coupon" %}</small>
+          </div>
+          <span class="text-danger">- ${{ cart.get_discount|floatformat:2 }}</span>
+        </li>
+        {% endif %}
+        <li class="list-group-item d-flex justify-content-between bg-success text-bg-success fw-semibold">
+          <span>{% trans "Total" %}</span>
+          <span>${{ cart.get_total_price_after_discount|floatformat:2 }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-7 col-lg-8">
+      <h4 class="mb-3">{% trans "Shipping address" %}</h4>
+      <div class="p-3 bg-white border">
+        <form method="POST" class="needs-validation" novalidate>
+          {% csrf_token %}
+          {{ form|crispy }}
+          
+          <hr class="my-4">
+  
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address" required>
+            <label class="form-check-label" for="same-address">{% trans "Shipping address is the same as my billing address" %}</label>
+          </div>
+  
+          <hr class="my-4">
+  
+          <button class="w-100 btn btn-dark btn-lg {% if not cart|length %}disabled{% endif %}" type="submit">{% trans "Place order" %}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/form-validation.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,140 @@
+{% load i18n %}
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-uppercase fs-3" href="/">Hiba</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'shop:product_list' %}">
+              {% trans "Products" %}
+            </a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+          {% with total_items=cart|length %}
+          {% if total_items > 0 %}
+          <button type="button" class="btn btn-primary">
+            <span>{% trans "Your cart" %}:</span>
+            <a href="{% url 'cart:cart_detail' %}" id="nav-cart" style="text-decoration: none;" class="nav-link">
+              {% blocktrans with total=cart.get_total_price count items=total_items %}
+              {{ items }} item, ${{ total }}
+              {% plural %}
+              {{ items }} items, ${{ total }}
+              {% endblocktrans %}
+            </a>
+          </button>
+          {% elif not order %}
+          <button class="btn btn-warning">
+            {% trans "Your cart is empty." %}
+          </button>
+          {% endif %}
+          {% endwith %}
+          
+          {% if request.user.is_authenticated %}
+          <button class="btn btn-primary dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user"></i> {{ request.user.first_name|default:request.user.username }}
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li>
+              <a class="dropdown-item" href="{% url 'edit' %}">
+                {% trans "Profile" %}
+              </a>
+            </li>
+            <li>
+              <form action="{% url 'logout' %}" method="POST">
+                {% csrf_token %}
+                <button class="dropdown-item">
+                  {% trans "Logout" %}
+                </button>
+              </form>
+            </li>
+          </ul>
+          {% else %}
+          <a href="{% url 'login' %}" class="btn btn-primary">
+            {% trans "Login" %}
+          </a>
+          {% endif %}
+
+          {% get_current_language as LANGUAGE_CODE %}
+          {% get_available_languages as LANGUAGES %}
+          {% get_language_info_list for LANGUAGES as languages %}
+          <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-earth-americas"></i> {% trans "Language" %}
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            {% for language in languages %}
+            <li>
+              <a class="dropdown-item {% if language.code == LANGUAGE_CODE %} active {% endif %}"
+                href="/{{ language.code }}/">
+                {{ language.name_local }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="text-uppercase navbar-brand mb-0 fs-2" href="/">
+        Hiba
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+        aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-start w-100">
+          <li class="nav-item">
+            <a href="/" class="nav-link w-100">
+              {% trans "Home" %}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'shop:product_list' %}" class="nav-link w-100 {% if not category %} active {% endif %}">
+              {% trans "Products" %}
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link w-100 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              {% trans "Categories" %}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item {% if not category %} active {% endif %}" href="{% url 'shop:product_list' %}">
+                  {% trans "All" %}
+                </a>
+              </li>
+              {% for c in categories %}
+              <li>
+                <a href="{{ c.get_absolute_url }}"
+                  class="dropdown-item {% if category.slug == c.slug %} active {% endif %}">
+                  {{ c.name }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> -->

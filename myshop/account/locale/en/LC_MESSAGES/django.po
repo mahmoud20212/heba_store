@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-25 19:59+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\account\forms.py:13
+msgid "Password"
+msgstr ""
+
+#: .\account\forms.py:15
+msgid "Repeat password"
+msgstr ""
+
+#: .\account\forms.py:29
+msgid "Passwords don't match."
+msgstr ""
+
+#: .\account\forms.py:35 .\account\forms.py:50
+msgid "Email already in use."
+msgstr ""
+
+#: .\account\models.py:8
+msgid "user"
+msgstr ""
+
+#: .\account\models.py:10
+msgid "photo"
+msgstr ""
+
+#: .\account\models.py:11
+msgid "phone number"
+msgstr ""
+
+#: .\account\templates\account\edit.html:7
+#: .\account\templates\account\edit.html:33
+msgid "Edit your account"
+msgstr ""
+
+#: .\account\templates\account\edit.html:14
+#: .\account\templates\account\my_orders.html:11
+#: .\account\templates\account\register.html:12
+#: .\account\templates\account\register_done.html:11
+#: .\account\templates\registration\login.html:13
+#: .\account\templates\registration\password_change_done.html:11
+#: .\account\templates\registration\password_change_form.html:12
+#: .\account\templates\registration\password_reset_done.html:11
+#: .\account\templates\registration\password_reset_form.html:12
+msgid "Home"
+msgstr ""
+
+#: .\account\templates\account\edit.html:17
+#: .\account\templates\account\my_orders.html:14
+#: .\account\templates\account\profile.html:22
+#: .\account\templates\registration\password_change_done.html:14
+#: .\account\templates\registration\password_change_form.html:15
+msgid "My account"
+msgstr ""
+
+#: .\account\templates\account\edit.html:36
+msgid "Photo"
+msgstr ""
+
+#: .\account\templates\account\edit.html:46
+msgid "Phone number"
+msgstr ""
+
+#: .\account\templates\account\edit.html:61
+msgid "Save changes"
+msgstr ""
+
+#: .\account\templates\account\edit.html:65
+#: .\account\templates\registration\password_change_form.html:5
+#: .\account\templates\registration\password_change_form.html:22
+msgid "Change your password"
+msgstr ""
+
+#: .\account\templates\account\my_orders.html:5
+#: .\account\templates\account\my_orders.html:17
+#: .\account\templates\account\profile.html:25
+msgid "My orders"
+msgstr ""
+
+#: .\account\templates\account\my_orders.html:29
+msgid "ID"
+msgstr ""
+
+#: .\account\templates\account\my_orders.html:30
+msgid "Review"
+msgstr ""
+
+#: .\account\templates\account\my_orders.html:31
+msgid "Paid"
+msgstr ""
+
+#: .\account\templates\account\my_orders.html:32
+msgid "Address"
+msgstr ""
+
+#: .\account\templates\account\my_orders.html:33
+msgid "Postal code"
+msgstr ""
+
+#: .\account\templates\account\my_orders.html:34
+msgid "City"
+msgstr ""
+
+#: .\account\templates\account\my_orders.html:61
+msgid "No orders available."
+msgstr ""
+
+#: .\account\templates\account\profile.html:15
+#: .\account\templates\account\register_done.html:4
+#: .\account\templates\account\register_done.html:19
+msgid "Welcome"
+msgstr ""
+
+#: .\account\templates\account\profile.html:30
+#: .\account\templates\registration\logged_out.html:4
+msgid "Logout"
+msgstr ""
+
+#: .\account\templates\account\register.html:5
+#: .\account\templates\account\register.html:17
+#: .\account\templates\account\register.html:22
+#: .\account\templates\account\register.html:29
+#: .\account\templates\account\register_done.html:16
+#: .\account\templates\registration\login.html:47
+#: .\account\templates\registration\login.html:49
+msgid "Create an account"
+msgstr ""
+
+#: .\account\templates\account\register.html:15
+#: .\account\templates\account\register_done.html:14
+#: .\account\templates\registration\login.html:6
+#: .\account\templates\registration\login.html:14
+#: .\account\templates\registration\login.html:18
+#: .\account\templates\registration\login.html:33
+#: .\account\templates\registration\password_reset_done.html:14
+#: .\account\templates\registration\password_reset_form.html:15
+msgid "Login"
+msgstr ""
+
+#: .\account\templates\account\register.html:24
+msgid "Please, sign up using the following form"
+msgstr ""
+
+#: .\account\templates\account\register.html:30
+msgid "Go back"
+msgstr ""
+
+#: .\account\templates\account\register_done.html:22
+msgid "Your account has been successfully created."
+msgstr ""
+
+#: .\account\templates\account\register_done.html:23
+msgid "Now you can"
+msgstr ""
+
+#: .\account\templates\account\register_done.html:23
+msgid "login"
+msgstr ""
+
+#: .\account\templates\registration\logged_out.html:8
+msgid "Logged out"
+msgstr ""
+
+#: .\account\templates\registration\logged_out.html:11
+msgid "You have been successfully logged out."
+msgstr ""
+
+#: .\account\templates\registration\logged_out.html:12
+#: .\account\templates\registration\password_reset_complete.html:13
+msgid "You can"
+msgstr ""
+
+#: .\account\templates\registration\logged_out.html:12
+msgid "login again"
+msgstr ""
+
+#: .\account\templates\registration\login.html:24
+msgid "Your username and password didn't match. Please try again."
+msgstr ""
+
+#: .\account\templates\registration\login.html:27
+msgid "Please, use the following form to log-in"
+msgstr ""
+
+#: .\account\templates\registration\login.html:38
+#: .\account\templates\registration\password_reset_form.html:24
+msgid "Forgotten your password?"
+msgstr ""
+
+#: .\account\templates\registration\login.html:48
+msgid ""
+"Creating an account has many benefits: check out faster, keep more than one "
+"address, track orders and more."
+msgstr ""
+
+#: .\account\templates\registration\password_change_done.html:4
+#: .\account\templates\registration\password_change_done.html:19
+msgid "Password changed"
+msgstr ""
+
+#: .\account\templates\registration\password_change_done.html:16
+#: .\account\templates\registration\password_change_form.html:17
+msgid "Password change"
+msgstr ""
+
+#: .\account\templates\registration\password_change_done.html:22
+msgid "Your password has been successfully changed."
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html:24
+msgid "Use the form below to change your password."
+msgstr ""
+
+#: .\account\templates\registration\password_change_form.html:28
+msgid "Change"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_complete.html:4
+msgid "Password reset"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_complete.html:8
+msgid "Password set"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_complete.html:12
+msgid "Your password has been set."
+msgstr ""
+
+#: .\account\templates\registration\password_reset_complete.html:13
+msgid "login now"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_confirm.html:5
+#: .\account\templates\registration\password_reset_confirm.html:9
+#: .\account\templates\registration\password_reset_done.html:4
+#: .\account\templates\registration\password_reset_done.html:21
+#: .\account\templates\registration\password_reset_form.html:5
+msgid "Reset your password"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_confirm.html:14
+msgid "Please enter your new password twice"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_confirm.html:18
+msgid "Change my password"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_confirm.html:27
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+
+#: .\account\templates\registration\password_reset_done.html:17
+#: .\account\templates\registration\password_reset_form.html:18
+msgid "Password forgotten"
+msgstr ""
+
+#: .\account\templates\registration\password_reset_done.html:25
+msgid "We've emailed you instructions for setting your password."
+msgstr ""
+
+#: .\account\templates\registration\password_reset_done.html:29
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with."
+msgstr ""
+
+#: .\account\templates\registration\password_reset_form.html:26
+msgid "Enter your e-mail address to obtain a new password."
+msgstr ""
+
+#: .\account\templates\registration\password_reset_form.html:30
+msgid "Send e-mail"
+msgstr ""
+
+#: .\account\views.py:69
+msgid "Profile updated successfully"
+msgstr ""
+
+#: .\account\views.py:71
+msgid "Error updating your profile"
+msgstr ""
